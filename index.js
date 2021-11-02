@@ -9,7 +9,7 @@ console.log(BirthdaysFromLocalStorage)
 
 if(BirthdaysFromLocalStorage){
     mybirthdays = BirthdaysFromLocalStorage;
-    render(mybirthdays)
+    render(mybirthdays) 
 }
 
 inputbutton.addEventListener("click", function InputSave(){

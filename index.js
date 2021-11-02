@@ -1,22 +1,49 @@
+let datetoday="sdffgg"
+
 let mybirthdays = []
 
-const inputbutton = document.getElementById("input-btn-1")
-const ClearButton = document.getElementById("input-btn-3")
-const inputEl = document.getElementById("input-el")
-const UlEl = document.getElementById("ul-el")
+const inputbutton = document.getElementById("input-btn-save")
+const ClearButton = document.getElementById("input-btn-delete")
+
+/*USer Input */
+const userName=document.getElementById("name-el");
+const userInput=document.getElementById("userInput-el")
+
+
 let BirthdaysFromLocalStorage = JSON.parse(localStorage.getItem("mybirthdays"))
-console.log(BirthdaysFromLocalStorage)
+console.log(typeof BirthdaysFromLocalStorage)
+
+const  jsonString= JSON.stringify(BirthdaysFromLocalStorage)
+
+const userArray=Object.keys(BirthdaysFromLocalStorage)
+
+console.log(typeof userArrayS)
+console.log(userArray[0])
+console.log(userArray)
+   
+
+
 
 if(BirthdaysFromLocalStorage){
     mybirthdays = BirthdaysFromLocalStorage;
+    
     render(mybirthdays) 
 }
 
 inputbutton.addEventListener("click", function InputSave(){
-console.log(mybirthdays)
-    mybirthdays.push(inputEl.value) 
-    inputEl.value = ""
+
+    mybirthdays.push(userName.value)
+    mybirthdays.push(userDay.value)
+ 
+
+    userName.value=""
+    userDay.value=""
+    userMonth.value=""
+    userYear.value=""
+
+    
     localStorage.setItem("mybirthdays", JSON.stringify(mybirthdays))
+
     render(mybirthdays)
 })
 
@@ -27,6 +54,7 @@ for(i =0; i < mybirthdays.length; i++){
     `<li>
         <a  target='_blank'  ${birthday[i]}>" ${birthday[i]}   "</a>
      </li>`
+     
 }
 UlEl.innerHTML = itemlist
 }

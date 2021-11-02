@@ -7,6 +7,21 @@ body{
    max-width: 500px;
    
 }
+.Intro-Container{
+    position: relative;
+    margin: auto;
+    padding: 10px 20px;
+    width: 316px;
+    height: 64px;
+    background: #ebfffa;
+    border: 1px solid #aaf2e1;
+    border-radius: 4px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #11a683;
+}
 input{
     width: 100%;
     padding:10px;

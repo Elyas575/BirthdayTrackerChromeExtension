@@ -1,9 +1,9 @@
 let datetoday="sdffgg"
 
 let mybirthdays = []
-
 const inputbutton = document.getElementById("input-btn-save")
 const ClearButton = document.getElementById("input-btn-delete")
+const UlEl = document.getElementById("ul-el")
 
 /*USer Input */
 const userName=document.getElementById("name-el");
@@ -15,14 +15,6 @@ console.log(typeof BirthdaysFromLocalStorage)
 
 const  jsonString= JSON.stringify(BirthdaysFromLocalStorage)
 
-const userArray=Object.keys(BirthdaysFromLocalStorage)
-
-console.log(typeof userArrayS)
-console.log(userArray[0])
-console.log(userArray)
-   
-
-
 
 if(BirthdaysFromLocalStorage){
     mybirthdays = BirthdaysFromLocalStorage;
@@ -33,28 +25,23 @@ if(BirthdaysFromLocalStorage){
 inputbutton.addEventListener("click", function InputSave(){
 
     mybirthdays.push(userName.value)
-    mybirthdays.push(userDay.value)
+    mybirthdays.push(userInput.value)
  
-
     userName.value=""
-    userDay.value=""
-    userMonth.value=""
-    userYear.value=""
+    userInput.value =""
 
-    
     localStorage.setItem("mybirthdays", JSON.stringify(mybirthdays))
-
     render(mybirthdays)
 })
 
 function render(birthday){
 let itemlist = "";
+let spacevariable = ""
 for(i =0; i < mybirthdays.length; i++){     
     itemlist += 
     `<li>
-        <a  target='_blank'  ${birthday[i]}>" ${birthday[i]}   "</a>
+          ${birthday[i]}  
      </li>`
-     
 }
 UlEl.innerHTML = itemlist
 }

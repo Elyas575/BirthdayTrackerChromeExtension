@@ -3,7 +3,8 @@ body{
     margin: 0px;
     padding: 10px;
     font-family: Arial, Helvetica, sans-serif;
-   min-width: 400;
+   min-width: 400px;
+   max-width: 500px;
    
 }
 input{
@@ -14,7 +15,9 @@ input{
     margin-bottom: 5px;
 }
 
-
+.input-btn-InputBox{
+    border-radius: 10px;
+}
 
 .glow-on-hover {
      display:inline-block;

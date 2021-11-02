@@ -18,7 +18,6 @@ const  jsonString= JSON.stringify(BirthdaysFromLocalStorage)
 
 if(BirthdaysFromLocalStorage){
     mybirthdays = BirthdaysFromLocalStorage;
-    
     render(mybirthdays) 
 }
 
@@ -36,11 +35,11 @@ inputbutton.addEventListener("click", function InputSave(){
 
 function render(birthday){
 let itemlist = "";
-let spacevariable = ""
+
 for(i =0; i < mybirthdays.length; i++){     
     itemlist += 
     `<li>
-          ${birthday[i]}  
+          ${birthday[i]} 
      </li>`
 }
 UlEl.innerHTML = itemlist

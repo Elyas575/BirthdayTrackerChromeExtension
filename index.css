@@ -10,9 +10,9 @@ body{
 
 .Intro-Container{
     position: relative;
-    margin: auto;
-    padding: 10px 20px;
-    width: 316px;
+    margin: 15px;
+    padding: 20px 10px;
+    width: auto;
     height: 64px;
     background: #ebfffa;
     border: 1px solid #aaf2e1;
@@ -49,9 +49,6 @@ input{
     z-index: 0;
     border-radius: 10px;
 }
-
-
-
 .glow-on-hover:before {
     content: '';
     background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);

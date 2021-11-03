@@ -5,7 +5,7 @@
 
     "description":"a demo extesion for learning purpose",
     "browser_action":{
-        "default_icon":"birthday.png",
+        "default_icon":"Logo/birthday.png",
         "default_popup":"Home.html"
     }
 }
